@@ -95,6 +95,13 @@ Yet to Place: 15
 📧 Contact me for improvements, suggestions, or collaboration!
 
 ---
+## 📘 Sample Data
+
+A sample CSV file is included for quick testing.
+
+🔹 File: [`Book1.csv`]
+
+---
 
 > 🌟 *“Behind every checkbox is a dream fulfilled. This tracker isn't just about data — it's about destinies shaped, one student at a time.”*
 
