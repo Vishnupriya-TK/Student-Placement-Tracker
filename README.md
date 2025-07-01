@@ -21,8 +21,7 @@ A lightweight, offline-friendly placement tracker built with **HTML, CSS, and Ja
 
 ## 📂 Live Preview
 
-> 📦 **\[Demo Not Hosted Yet]** – You can open `index.html` directly in your browser.
-
+https://student-placement-tracker-git-main-vishnu-priya-t-ks-projects.vercel.app
 ---
 
 ## 📁 File Structure
@@ -39,7 +38,7 @@ A lightweight, offline-friendly placement tracker built with **HTML, CSS, and Ja
 
 ## 🧪 How to Use
 
-1. **Clone this repo** or [Download ZIP](https://github.com/your-username/placement-tracker/archive/refs/heads/main.zip)
+1. **Clone this repo** or [Download ZIP](https://github.com/Vishnupriya-TK/Student-Placement-Tracker.git)
 2. Open `index.html` in any modern browser
 3. Upload a `.csv` file like:
 
@@ -66,8 +65,8 @@ Greetings!
 
 So far placed students:
 
-1. Abi (Infosys)
-2. Arun (Zoho)
+1. Abi (Infosys - 6 LPA)
+2. Arun (Zoho - 4.5 LPA)
 
 Placement Statistics 2020–2024:
 Total Students: 50
@@ -83,7 +82,7 @@ Yet to Place: 15
 ## 📌 Dependencies
 
 * 🚫 No frameworks or libraries required
-* ⚙️ Works entirely with Vanilla JavaScript and Browser APIs
+* ⚙️ Works entirely with JavaScript and Browser APIs
 * 💾 Persistent using `localStorage`
 
 ---
