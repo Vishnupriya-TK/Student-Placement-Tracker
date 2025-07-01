@@ -22,6 +22,7 @@ A lightweight, offline-friendly placement tracker built with **HTML, CSS, and Ja
 ## 📂 Live Preview
 
 https://student-placement-tracker-git-main-vishnu-priya-t-ks-projects.vercel.app
+
 ---
 
 ## 📁 File Structure
