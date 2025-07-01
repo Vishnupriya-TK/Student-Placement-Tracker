@@ -94,41 +94,42 @@ function updateCounts() {
 
 // Copy message
 function copyMessage() {
-    const year = document.getElementById('yearRange').value || 'N/A';
+  const year = document.getElementById('yearRange').value || 'N/A';
 
-    const placed = studentData.filter(s => s.selected && s.company);
-    const total = studentData.length;
-    const placedCount = placed.length;
+  const placed = studentData.filter(s => s.selected && s.company);
+  const total = studentData.length;
+  const placedCount = placed.length;
 
-    const interestedInput = document.getElementById('interestedCount').value;
-    const eligibleInput = document.getElementById('eligibleCount').value;
+  const interestedInput = document.getElementById('interestedCount').value;
+  const eligibleInput = document.getElementById('eligibleCount').value;
 
-    const interested = interestedInput ? parseInt(interestedInput) : total;
-    const eligible = eligibleInput ? parseInt(eligibleInput) : total;
-    const yetToPlace = eligible - placedCount;
-    const percentage = eligible > 0 ? Math.round((placedCount / eligible) * 100) : 0;
+  const interested = interestedInput ? parseInt(interestedInput) : total;
+  const eligible = eligibleInput ? parseInt(eligibleInput) : total;
+  const yetToPlace = eligible - placedCount;
+  const percentage = eligible > 0 ? Math.round((placedCount / eligible) * 100) : 0;
 
-    let message = `Greetings!\n\nSo far placed students:\n\n`;
+  let message = `Greetings!\n\nSo far placed students:\n\n`;
 
-    placed.forEach((s, i) => {
-        message += `${i + 1}. ${s.name} (${s.company})\n`;
-    });
+  placed.forEach((s, i) => {
+    message += `${i + 1}. ${s.name} (${s.company} - ${s.salary} LPA)\n`;
+  });
 
-    message += `\nPlacement Statistics ${year}:\n`;
-    message += `Total Students: ${total}\n`;
-    message += `Interested: ${interested}\n`;
-    message += `Eligible: ${eligible}\n`;
-    message += `Placed: ${placedCount}\n`;
-    message += `Placed %: ${percentage}%\n`;
-    message += `Yet to Place: ${yetToPlace}\n`;
+  message += `\nPlacement Statistics ${year}:\n`;
+  message += `Total Students: ${total}\n`;
+  message += `Interested: ${interested}\n`;
+  message += `Eligible: ${eligible}\n`;
+  message += `Placed: ${placedCount}\n`;
+  message += `Placed %: ${percentage}%\n`;
+  message += `Yet to Place: ${yetToPlace}\n`;
 
-    document.getElementById('outputMessage').value = message;
+  document.getElementById('outputMessage').value = message;
 
-    navigator.clipboard.writeText(message)
-        .then(() => alert("Message copied to clipboard!"))
-        .catch(() => alert("Failed to copy message."));
+  navigator.clipboard.writeText(message)
+    .then(() => alert("Message copied to clipboard!"))
+    .catch(() => alert("Failed to copy message."));
 }
 
+//export csv
 function exportToCSV() {
     let csv = "regno,name,selected,company,salary\n";
     studentData.forEach(s => {
@@ -142,6 +143,8 @@ function exportToCSV() {
     a.download = 'student_placement_data.csv';
     a.click();
 }
+
+//reset data
 function resetData() {
     if (confirm("Are you sure you want to reset all data?")) {
         localStorage.removeItem("studentData");
