@@ -11,13 +11,6 @@
 <body>
     <h1 style="text-align: center;">Welcome</h1>
     <div class="container">
-
-        <h2>📁 Upload Student CSV</h2>
-        <input type="file" id="csvFile" accept=".csv" />
-
-        <div id="tableContainer"></div>
-
-        <div class="summary" id="summaryCounts"></div>
         <label for="yearRange"><strong>Placement Year:</strong></label>
         <input type="text" id="yearRange" placeholder="e.g. 2020–2024" style="margin-bottom: 10px;width: 300px;" />
         <div style="margin: 10px 0;">
@@ -27,7 +20,13 @@
             <label for="eligibleCount" style="margin-left: 20px;"><strong>Eligible:</strong></label>
             <input type="number" id="eligibleCount" placeholder="Enter eligible count" />
         </div>
+        <h3>📁 Upload Student CSV</h3>
+        <input type="file" id="csvFile" accept=".csv" />
 
+        <div id="tableContainer"></div>
+
+        <div class="summary" id="summaryCounts"></div>
+        
         <textarea id="outputMessage" rows="8" readonly></textarea>
 
         <button onclick="copyMessage()">📋 Copy Message</button>
